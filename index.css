@@ -1,0 +1,235 @@
+/* Import font from google font */
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Carrois+Gothic+SC&family=Glegoo&family=Inter&display=swap');
+
+/********* Custom properties **********8*/
+:root{
+    --primary-light-bg: #f5f5f5;
+    --primary-dark-bg: #525252;
+    --rose-red: #DD8270;
+    --rose-red-light: #FFB3A4;
+    --baby-blue: #BDCDBB;
+    --baby-blue-light: #D7E2D6;
+    --olive-green: #B5C07A;
+    --olive-green-light: #D3DE9A;
+    --font-header: 'Carrois Gothic SC', sans-serif;
+    --font-title: 'Bungee', cursive;
+    --font-text: 'Glegoo', serif;
+    --font-sm: 'Inter', sans-serif;
+}
+
+body{
+    background-color: var(--primary-light-bg);
+    font-size: 0.7rem;
+    font-family: var(--font-header);
+}
+
+.first{
+    color: var(--rose-red);
+}
+
+.second{
+    color: var(--baby-blue);
+}
+
+.third{
+    color: var(--olive-green);
+}
+
+.first-l{
+    color: var(--rose-red-light) !important;
+}
+
+.second-l{
+    color: var(--baby-blue-light) !important;
+}
+
+.third-l{
+    color: var(--olive-green-light) !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--primary-light-bg); 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: var(--baby-blue); 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--baby-blue-light); 
+  }
+
+  .disabled-link{
+    cursor: default;
+    pointer-events: none;        
+    text-decoration: none;
+}
+
+/********* Navbar ***********/
+
+.navbar-cus{
+    background-color: #525252;
+    height: 75px;
+}
+
+.nav-logo{
+    position: absolute;
+    top: 0;
+    left: 46%;
+    right: 54%;
+    z-index: 9999;
+}
+
+.nav-link{
+    font-family: var(--font-header);
+    font-size: 1rem;
+}
+
+.nav-link:hover{
+    transform: scale(1.03);
+}
+
+.cart-icon {
+  font-size: 1.2rem; 
+  color: rgb(240, 127, 219);
+ }
+/************* Main content **************/
+
+/***** #01home Home page Start ******/
+
+/* top pick */
+.top-pack{
+    height: 100%;
+    background-color: var(--primary-dark-bg); 
+}
+
+.content-container  h1{
+    font-family: var(--font-title);
+    font-size: 3.2rem;
+    line-height: 96px;
+    letter-spacing: 0.2em;
+    color: var(--olive-green);
+    text-shadow: -4px 0 var(--olive-green-light), 0 4px var(--olive-green-light), 4px 0 var(--olive-green-light), 0 -4px var(--olive-green-light);
+}
+
+.content-container  h1 > span{
+    color: var(--rose-red);
+}
+
+/* top pakc cards */
+.card{
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.card-title{
+    font-family: var(--font-title);
+    line-height: 29px;
+    text-shadow: -1.5px 0 var(--olive-green-light), 0 1.5px var(--olive-green-light), 1.5px 0 var(--olive-green-light), 0 -1.5px var(--olive-green-light);
+}
+
+.card-odd{
+    color: var(--olive-green);
+}
+
+.card-even{
+    color: var(--rose-red);
+}
+
+/* home menu */
+.home-menu{
+    height: 100%;
+}
+
+.detail-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.detail{
+    width: 20rem;
+    text-align: center;
+}
+
+/*************** #01home Home Page End *****************/
+
+/*************** #02about About Start ******************/
+.about-container{
+    height: 100vh;
+    padding-top: 75px;
+}
+
+.about-detail  p{
+    font-size: 1.3rem;
+    letter-spacing: 0.4rem;
+}
+/*************** #02about About End ******************/
+
+.page-container{
+    height: 100%;
+    padding-top: 75px;
+}
+
+/*************** #05contact Contact Us Start ******************/
+.contact-container{
+    height: 100vh;
+    padding-top: 75px;
+}
+
+
+/*************** #05contact Contact Us End ******************/
+label{
+    font-size: 0.8rem;
+}
+
+.form-group > input[type=text]{
+    background-color: var(--rose-red-light);
+    border-color: var(--primary-light-bg);
+    width: 100%;
+}
+
+.form-group > input[type=email]{
+    background-color: var(--baby-blue-light);
+    border-color: var(--primary-light-bg);
+    width: 100%;
+}
+
+#msg{
+    background-color: var(--olive-green-light);
+    border-color: var(--primary-light-bg);
+}
+
+.btn{
+    border-radius: 20px;
+}
+
+.location > p{
+    font-size: 0.9rem;
+}
+
+/*********************** footer *********************/
+.footer{
+    height: 11.25rem;
+    background-color: var(--primary-dark-bg);
+    color: var(--primary-light-bg);
+}
+
+.footer h6{
+    font-family: var(--font-sm);
+    letter-spacing: 0.1em;
+    line-height: 24px;
+    font-weight: 400;
+    font-size: .85rem;
+    margin-bottom: 6px;
+}
+
+.text-left > p {
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    margin: 0;
+}

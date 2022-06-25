@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panton Bakery</title>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="index.css">
+    <!-- CSS merge into final index.css when complete -->
+
+</head>
+
+<body>
+
+    <!-- #00nav  Navbar Start-->
+    <div id="00nav">
+        <div class="center_logo">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-cus">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link first-l" href="./about.html">About</a>
+                        <a class="nav-link second-l disabled-link" href="./menu.html">Menu</a>
+                        <a class="nav-link third-l" href="./contact.html">Contact Us</a>
+                    </div>
+                </div>
+                <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link " href="./order.html"><img src="./image/shopping_cart.svg" width="20px"
+                                    alt=""><span class="cart-icon">0</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Logo fix at the center -->
+                <div class="nav-logo">
+                    <a href="./index.html"><img src="./image/logo_bg.svg" alt="" width="100px"></a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- #00nav Navbar end -->
+
+    <!-- Part03 start here -->
+    <section id="03menu">
+        <div class="page-container">
+            <h1 class="text-center pt-4">Menu of <span>ALL</span></h1>
+            <!-- <div class="menu-container px-3 d-flex justify-content-around "> -->
+            <div class="menu-container m-5  justify-content-around">
+                <!-- #### products must be synchronized with those in order.html ### -->
+                <div class="products justify-content-between">
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cookie001.jpg" alt="Macaron Box 馬卡龍 (9 件裝)">
+                        <h5 class="product__name first">Macaron Box</h5>
+                        <p>馬卡龍 (9 件裝)</p>
+                        <p class="product__price">250.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cookie001">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cookie002.webp"
+                            alt="Classic Chocolate Cookie 經典朱古力曲奇">
+                        <h5 class="product__name second">Classic Chocolate Cookie</h5>
+                        <p>經典朱古力曲奇</p>
+                        <p class="product__price">26.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cookie002">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cookie003.webp"
+                            alt="Triple Chocolate Cookie 三重朱古力曲奇">
+                        <h5 class="product__name third">Triple Chocolate Cookie</h5>
+                        <p>三重朱古力曲奇</p>
+                        <p class="product__price">30.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cookie003">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cookie004.webp"
+                            alt="Chocolate Chip Pecan Cookie 朱古力碎核桃曲奇">
+                        <h5 class="product__name first">Chocolate Chip Pecan Cookie</h5>
+                        <p>朱古力碎核桃曲奇</p>
+                        <p class="product__price">26.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cookie004">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cookie005.webp"
+                            alt="Hazelnut Nutella Cookie 榛⼦花⽣醬曲奇">
+                        <h5 class="product__name second">Hazelnut Nutella Cookie</h5>
+                        <p>榛⼦花⽣醬曲奇</p>
+                        <p class="product__price">26.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cookie005">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cookie006.webp"
+                            alt="Matcha White Chocolate Chip Cookie 抹茶堅果⽩朱古力曲奇">
+                        <h5 class="product__name third">Matcha White Chocolate Chip Cookie</h5>
+                        <p>抹茶堅果⽩朱古力曲奇</p>
+                        <p class="product__price">30.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cookie006">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cust021.webp" alt="Wedding Box Set 結婚回禮小曲奇">
+                        <h5 class="product__name first">Wedding Box Set</h5>
+                        <p>結婚回禮小曲奇</p>
+                        <p class="product__price">128.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cust021">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Cust022.jpg" alt="Baby Shower Box Set 寶寶曲奇小禮盒">
+                        <h5 class="product__name second">Baby Shower Box Set</h5>
+                        <p>寶寶曲奇小禮盒</p>
+                        <p class="product__price">128.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Cust022">Details</button>
+                    </div>
+
+                    <div class="product">
+                        <img class="product__image" src="./Prdt-img/Special031.jpg" alt="Seasonal Cookies 節日限定曲奇">
+                        <h5 class="product__name third">Seasonal Cookies </h5>
+                        <p>節日限定曲奇</p>
+                        <p class="product__price">30.00</p>
+                        <button class="btn btn--primary" data-action="ADD_TO_CART" onclick="addorder()">Try It</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#Special031">Details</button>
+                    </div>
+                </div>
+
+            </div>
+            <!--03menu end -->
+            <div class="prdtdetail">
+                <!-- *** start modal details -->
+                <!-- The Modal -->
+                <div class="modal fade" id="Cookie001">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cookie001.jpg"
+                                        alt="Macaron Box 馬卡龍 (9 件裝)">
+                                    <h5 class="product__name first">Macaron Box</h5>
+                                    <p>馬卡龍 (9 件裝)</p>
+                                    <p class="product__price">250.00</p>
+                                    <p> 每件馬卡龍均由人手製作，9款不同口味，為您獻上完美無瑕的法式甜品。<br>
+                                        口味: 朱古力、紅桑子、開心果、伯爵茶、玫瑰、荔枝、海鹽焦糖、熱情果、雲呢拿各1粒</p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Cookie002">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cookie002.webp"
+                                        alt="Classic Chocolate Cookie 經典朱古力曲奇">
+                                    <h5 class="product__name second">Classic Chocolate Cookie</h5>
+                                    <p>經典朱古力曲奇</p>
+                                    <p class="product__price">26.00</p>
+                                    <p> 經典朱古力曲奇麵團、⽩朱古力塊、⽜奶朱古力碎、可可粒、70% ⿊朱古力
+                                        ⽢納許、半⽣朱古力布朗尼、⾃製朱古力脆脆、布朗尼⽪……
+                                    </p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Cookie003">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cookie003.webp"
+                                        alt="Triple Chocolate Cookie 三重朱古力曲奇">
+                                    <h5 class="product__name third">Triple Chocolate Cookie</h5>
+                                    <p>三重朱古力曲奇</p>
+                                    <p class="product__price">30.00</p>
+                                    <p> 豐富的朱古力餅乾底，含有 60% 的黑朱古力碎、牛奶朱古力碎、餅乾和奶油白朱古力塊。</p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Cookie004">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cookie004.webp"
+                                        alt="Chocolate Chip Pecan Cookie 朱古力碎核桃曲奇">
+                                    <h5 class="product__name first">Chocolate Chip Pecan Cookie</h5>
+                                    <p>朱古力碎核桃曲奇</p>
+                                    <p class="product__price">26.00</p>
+                                    <p> 外面酥脆，裡面柔軟粘稠，每一口朱古力碎和山核桃的比例都很完美。 </p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Cookie005">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cookie005.webp"
+                                        alt="Hazelnut Nutella Cookie 榛⼦花⽣醬曲奇">
+                                    <h5 class="product__name second">Hazelnut Nutella Cookie</h5>
+                                    <p>榛⼦花⽣醬曲奇</p>
+                                    <p class="product__price">26.00</p>
+                                    <p> 榛子和朱古力味完美比例，大量的花生醬從裡面滲出來。（含堅果） </p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Cookie006">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cookie006.webp"
+                                        alt="Matcha White Chocolate Chip Cookie 抹茶堅果⽩朱古力曲奇">
+                                    <h5 class="product__name third">Matcha White Chocolate Chip Cookie</h5>
+                                    <p>抹茶堅果⽩朱古力曲奇</p>
+                                    <p class="product__price">30.00</p>
+                                    <p> 使用高品質的宇治抹茶製作這款餅乾，並混合了絲滑的白朱古力碎和澳洲堅果。額外在餅乾
+                                        的中心填滿了抹茶甘納許，抹茶味道更加濃郁。
+                                    </p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Cust021">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cust021.webp"
+                                        alt="Wedding Box Set 結婚回禮小曲奇">
+                                    <h5 class="product__name first">Wedding Box Set</h5>
+                                    <p>結婚回禮小曲奇</p>
+                                    <p class="product__price">128.00</p>
+                                    <p> 浪漫甜美婚嫁回禮小曲奇，可以把一對新人的名字和好日子印在曲奇餅上，實為婚宴回禮禮物首選。
+                                        6件裝包括有不同設計，小禮盒包裝。
+                                        手作製作需時，建議你提前最少2星期前訂購。
+                                    </p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Cust022">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Cust022.jpg"
+                                        alt="Baby Shower Box Set 寶寶曲奇小禮盒">
+                                    <h5 class="product__name second">Baby Shower Box Set</h5>
+                                    <p>寶寶曲奇小禮盒</p>
+                                    <p class="product__price">128.00</p>
+                                    <p> 手作的可愛Baby Shower曲奇小禮盒，每塊曲奇獨立小膠袋包裝，很適合媽媽用作回禮小禮物及紀念品。
+                                        6件裝包括有不同設計，小禮盒包裝。
+                                        你可以選擇粉藍或粉紅色，可以在小熊款式加上BB英文名。
+                                        手作製作需時，建議你提前最少2星期前訂購。
+                                    </p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Special031">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title"></h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="product">
+                                    <img class="product__image" src="./Prdt-img/Special031.jpg"
+                                        alt="Seasonal Cookies 節日限定曲奇">
+                                    <h5 class="product__name third">Seasonal Cookies</h5>
+                                    <p>節日限定曲奇</p>
+                                    <p class="product__price">30.00</p>
+                                    <p> 為迎接普世歡騰的聖誕節，近期推出多款充滿節日特色的限定牛油曲奇。 </p>
+                                    <button class="btn btn--primary" onclick="addorder()">Try It</button>
+                                </div>
+                            </div>
+                            <!--Modal body end -->
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--03menu product details end -->
+        </div>
+        <!--03menu product details end -->
+    </section> <!-- Section 03menu end -->
+    <!-- Part03 menu end -->
+
+    <!-- ********End of Body Here******** -->
+</body>
+<!-- Start footer -->
+<footer>
+    <div class="d-flex flex-row justify-content-between footer p-5 align-items-center">
+        <div>
+            <a href="./index.html"><img src="./image/logo_bg.svg" alt="" width="130px"></a>
+        </div>
+        <div class="d-flex flex-row justify-content-between align-items-start">
+            <!-- Shop details -->
+            <div class="d-flex flex-row align-items-start justify-content-between">
+                <div class="text-left">
+                    <h6>Visit Our Store: </h6>
+                    <p>Blk. F.12/F. Comfort Bldg.</p>
+                    <p>88 Nathan Road,</p>
+                    <p>Central,Hongkong</p>
+                </div>
+                <div class="text-left mx-5">
+                    <h6>Opening Hours: </h6>
+                    <p>Mon - Fri : 08:00 - 20:00</p>
+                    <p>Sat - Sun : 11:00 - 21:00</p>
+                </div>
+            </div>
+            <!-- Social Media -->
+            <div class="d-flex flex-column align-items-start justify-content-between">
+                <h6>Find Us: </h6>
+                <div class="d-flex flex-rwo">
+                    <a href="https://www.instagram.com/"><img src="./image/Instagram.svg" alt="Instagram"
+                            width="35px"></a>
+                    <a class="mx-5" href="https://www.facebook.com/"><img src="./image/facebook.svg" alt="Facebook"
+                            width="35px"></a>
+                    <a href="https://wa.me/15551234567"><img src="./image/whatsapp.svg" alt="Whatsapp" width="35px"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End of footer  -->
+
+<!-- ********start of JS and export as cart.js after testing ******** -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+<script src="cart.js"></script>
+
+</html>
